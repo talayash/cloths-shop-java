@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" style="-fx-background-color: #384357;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Shop">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutY="47.0" prefHeight="529.0" prefWidth="220.0" style="-fx-background-color: #07162d;" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="47.0">
+         <children>
+            <ImageView fx:id="imgUser" fitHeight="122.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" y="10.0">
+               <image>
+                  <Image url="@img/userlogo.png" />
+               </image></ImageView>
+            <Label fx:id="userName" text="Username " textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSoccer" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Soccer" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/menu/soccer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnNBA" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="NBA" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/menu/nba.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnPoloShirts" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Polo Shirts" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/menu/polo_shirt.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSportShoes" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Sport Shoes" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/menu/sport_shoes.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnKids" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Kids" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/menu/kids.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <StackPane layoutX="219.0" layoutY="47.0" prefHeight="530.0" prefWidth="833.0" style="-fx-background-color: #eef1f8;">
+         <children>
+            <Pane fx:id="pnlSoccer" prefHeight="541.0" prefWidth="794.0" visible="false">
+               <children>
+                  <Text layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Soccer products">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+                  <ScrollPane layoutX="13.0" layoutY="51.0" prefHeight="471.0" prefWidth="774.0">
+                     <content>
+                        <VBox fx:id="vboxPnlSoccer" prefHeight="455.0" prefWidth="756.0" style="-fx-background-color: #ffffff;" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlNBA" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Text layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NBA Products">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+                  <ScrollPane layoutX="13.0" layoutY="51.0" prefHeight="471.0" prefWidth="774.0">
+                     <content>
+                        <VBox fx:id="vboxPnlNBA" prefHeight="455.0" prefWidth="772.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlPoloShirts" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Text layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Polo Shirts">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+                  <ScrollPane layoutX="13.0" layoutY="51.0" prefHeight="471.0" prefWidth="774.0">
+                     <content>
+                        <VBox fx:id="vboxPnlPoloShirts" prefHeight="455.0" prefWidth="756.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlSportShoes" prefHeight="554.0" prefWidth="793.0" visible="false">
+               <children>
+                  <Text layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sport Shoes" wrappingWidth="150.70074462890625">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+                  <ScrollPane layoutX="13.0" layoutY="51.0" prefHeight="471.0" prefWidth="774.0">
+                     <content>
+                        <VBox fx:id="vboxPnlSportShoes" prefHeight="455.0" prefWidth="756.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlKids" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Text layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kids products">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+                  <ScrollPane layoutX="13.0" layoutY="51.0" prefHeight="514.0" prefWidth="774.0">
+                     <content>
+                        <VBox fx:id="vboxPnlKids" prefHeight="511.0" prefWidth="772.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlCart" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Text layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Cart">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+                  <ScrollPane layoutX="13.0" layoutY="51.0" prefHeight="317.0" prefWidth="772.0">
+                     <content>
+                        <VBox fx:id="vboxPnlCart" prefHeight="317.0" prefWidth="772.0" />
+                     </content>
+                  </ScrollPane>
+                  <TextArea fx:id="cartDetails" editable="false" layoutX="14.0" layoutY="377.0" prefHeight="88.0" prefWidth="207.0" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="payButton" layoutX="14.0" layoutY="465.0" mnemonicParsing="false" onAction="#onClickPayButton" prefHeight="42.0" prefWidth="140.0" stylesheets="@style.css" text="PAY">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlOrders" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Text layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Orders" wrappingWidth="150.70074462890625">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+                <AnchorPane layoutY="51.0" minHeight="0.0" minWidth="0.0" prefHeight="470.0" prefWidth="793.0">
+                     <children>
+                        <TextArea fx:id="ordersTextArea" editable="false" layoutX="7.0" layoutY="6.0" prefHeight="463.0" prefWidth="785.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+      <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="5.0" layoutY="6.0">
+         <image>
+            <Image url="@img/logo.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="55.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clothes Shop">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnCart" layoutX="910.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="35.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="37.0" fitWidth="37.0">
+               <image>
+                  <Image url="@img/menu/shopping_cart.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Text fx:id="numberOfProducts" fill="WHITE" layoutX="955.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+      <Button fx:id="btnClose" layoutX="999.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="27.0" prefWidth="37.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@img/menu/close.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnMinimize" layoutX="969.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="27.0" prefWidth="37.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@img/menu/minimize.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnOrders" layoutX="865.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="35.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0">
+               <image>
+                  <Image url="@img/menu/orders.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+   <effect>
+      <DropShadow color="#1b1eeb" />
+   </effect>
+</AnchorPane>

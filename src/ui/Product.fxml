@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="itemC" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="111.0" prefWidth="772.0" spacing="80.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-background-insets: 0;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ImageView fx:id="productImage" fitHeight="100.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../eclipse-workspace/Cloths_Shop/src/ui/img/soccer/bvb1.png" />
+            </image>
+            <HBox.margin>
+                <Insets left="10.0" />
+            </HBox.margin>
+        </ImageView>
+        <Label fx:id="lblProductName" prefHeight="25.0" prefWidth="179.0" text="Product Name" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis></Label>
+        <Label fx:id="lblProductPrice" prefHeight="26.0" prefWidth="41.0" text="Price" textAlignment="CENTER">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+        </Label>
+      <Pane prefHeight="107.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btnRemove" layoutX="37.0" layoutY="35.0" mnemonicParsing="false" onAction="#onActionRemove" prefHeight="41.0" prefWidth="74.0" style="-fx-border-color: #FF0000; -fx-border-radius: 20; -fx-background-color: transparent;" text="Remove" textAlignment="RIGHT">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+              <Button fx:id="btnAdd" layoutX="37.0" layoutY="35.0" mnemonicParsing="false" onAction="#onActionAddToCart" prefHeight="41.0" prefWidth="74.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;"  text="Add" textAlignment="RIGHT">
+               <font>
+                  <Font size="14.0" />
+               </font>
+              </Button>
+         </children>
+      </Pane>
+    </children>
+    <effect>
+        <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+    </effect>
+</HBox>
