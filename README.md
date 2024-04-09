@@ -16,5 +16,5 @@ An application developed during the degree in an advanced programming course in 
 
 ![App Screenshot](https://i.ibb.co/Nt47Hx1/Screenshot-2.png)
 
-![App Screenshot](https://i.ibb.co/gPkJRJK/Screenshot-3.png)
+![App Screenshot](https://i.ibb.co/YBXNPwY/q.png)
 
